@@ -47,4 +47,17 @@ public class EventoDTO {
         return eventosDE;
     }
 
+    public EventoDTO convertFromEventosDE(EventosDE eventosDE) {
+
+        // TODO falta convertir
+        eventosDE
+                .getrGesEveList()
+                .stream()
+                .forEach(i -> {
+                    rGesEveList.add(new TrGesEve());
+                });
+
+        return this;
+    }
+
 }
