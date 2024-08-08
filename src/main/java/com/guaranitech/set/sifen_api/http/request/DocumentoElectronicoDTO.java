@@ -45,7 +45,7 @@ public class DocumentoElectronicoDTO {
 	@Schema(name = "fecha_firma", description = "Campo dFecFirma. La fecha y hora de la firma digital debe "
 			+ "ser anterior a la fecha y hora de transmisión al SIFEN. Fecha y hora en el formato YYYY-MM-DD HH:MI:SS. "
 			+ "El plazo límite de transmisión del DE al SIFEN para la aprobación normal es de 72 h contadas a partir de la fecha y"
-			+ "hora de la firma digital." , example = "9999-12-31 23:59:59", format = "YYYY-MM-DD HH:MI:SS", requiredMode = RequiredMode.REQUIRED)
+			+ "hora de la firma digital.", example = "9999-12-31 23:59:59", format = "YYYY-MM-DD HH:MI:SS", requiredMode = RequiredMode.REQUIRED)
 	@JsonProperty(value = "fecha_firma")
 	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
 	private LocalDateTime dFecFirma;
@@ -82,7 +82,7 @@ public class DocumentoElectronicoDTO {
 
 		// Grupo A
 		DE.setdFecFirma(getDFecFirma());
-		DE.setdSisFact(new Short("1"));
+		DE.setdSisFact(Short.parseShort("1"));
 
 		// Grupo B
 		DE.setgOpeDE(getGOpeDE().convertToTgOpeDE());
