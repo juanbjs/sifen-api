@@ -34,7 +34,7 @@ SIFEN-API es un proyecto de código abierto desarrollado en Java, utilizando el 
     ```
 
 ## Uso
-La API proporciona varios endpoints para interactuar con el SIFEN. Puedes consultar la documentación de la API generada automáticamente (usualmente disponible en /swagger-ui.html si Swagger está configurado).
+La API proporciona varios endpoints para interactuar con el SIFEN. Puedes consultar la documentación de la API generada automáticamente por Swagger /swagger-ui/index.html.
 
 ## Contribuciones
 Las contribuciones son bienvenidas. Si deseas mejorar el proyecto, sigue estos pasos:
