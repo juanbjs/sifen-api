@@ -11,9 +11,9 @@ import com.guaranitech.set.sifen_api.http.response.RespuestaConsultaRUCDTO;
 import com.guaranitech.set.sifen_api.service.ConsultaRucService;
 import com.roshka.sifen.core.exceptions.SifenException;
 
-import io.swagger.v3.oas.annotations.Hidden;
+import io.swagger.v3.oas.annotations.tags.Tag;
 
-@Hidden
+@Tag(name = "Consulta de RUC", description = "API para consultar RUC a la SIFEN")
 @RestController
 @RequestMapping("/api/consulta")
 public class ConsultaController {

@@ -34,11 +34,12 @@ public class DocumentoElectronicoController {
 
 	private DocumentoElectronicoService documentoElectronicoService;
 
-	@Operation(summary = "Enviar factura electronica a la SIFEN")
+	@Operation(summary = "Enviar documentos electronicos a la SIFEN")
 	@ApiResponses(value = {
-			@ApiResponse(responseCode = "200", description = "Factura enviada a la SIFEN exitosamente", content = {
+			@ApiResponse(responseCode = "200", description = "DE enviada a la SIFEN exitosamente", content = {
 					@Content(mediaType = "application/json", schema = @Schema(implementation = RespuestaRecepcionDEDTO.class)) }),
-			@ApiResponse(responseCode = "400", description = "Error al intentar enviar la factura a la SIFEN", content = @Content) })
+			@ApiResponse(responseCode = "400", description = "Error al intentar enviar el DE a la SIFEN", content = @Content),
+			@ApiResponse(responseCode = "500", description = "Error al obtener el Certidicado del Emisor o firmar el documento", content = @Content) })
 	@PostMapping("/sync")
 	public ResponseEntity<RespuestaRecepcionDEDTO> sendDESync(
 			@RequestBody @Valid DocumentoElectronicoDTO deDTO)
@@ -46,11 +47,12 @@ public class DocumentoElectronicoController {
 		return ResponseEntity.ok(documentoElectronicoService.processDESync(deDTO));
 	}
 
-	@Operation(summary = "Enviar factura electronica a la SIFEN")
+	@Operation(summary = "Enviar documentos electronicos a la SIFEN en Lotes")
 	@ApiResponses(value = {
-			@ApiResponse(responseCode = "200", description = "Factura enviada a la SIFEN exitosamente", content = {
-					@Content(mediaType = "application/json", schema = @Schema(implementation = RespuestaRecepcionLoteDEDTO.class)) }),
-			@ApiResponse(responseCode = "400", description = "Error al intentar enviar la factura a la SIFEN", content = @Content) })
+			@ApiResponse(responseCode = "200", description = "Lote enviado a la SIFEN exitosamente", content = {
+					@Content(mediaType = "application/json", schema = @Schema(implementation = RespuestaRecepcionDEDTO.class)) }),
+			@ApiResponse(responseCode = "400", description = "Error al intentar enviar el Lote a la SIFEN", content = @Content),
+			@ApiResponse(responseCode = "500", description = "Error al obtener el Certidicado del Emisor o firmar el documento", content = @Content) })
 	@PostMapping("/lote")
 	public ResponseEntity<RespuestaRecepcionLoteDEDTO> sendDELote(
 			@RequestBody @Valid List<DocumentoElectronicoDTO> deDTOList)

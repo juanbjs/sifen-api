@@ -38,7 +38,7 @@ public class EventoController {
                     @Content(mediaType = "application/json", schema = @Schema(implementation = RespuestaRecepcionEventoDTO.class)) }),
             @ApiResponse(responseCode = "400", description = "Error al intentar enviar el evento a la SIFEN", content = @Content) })
     @PostMapping
-    public ResponseEntity<RespuestaRecepcionEventoDTO> enviarNotaCreditoDebitoElectronica(
+    public ResponseEntity<RespuestaRecepcionEventoDTO> enviarEventos(
             @RequestBody @Valid EventoDTO dto)
             throws SifenException, FileNotFoundException {
         return ResponseEntity.ok(eventoService.processEvent(dto));

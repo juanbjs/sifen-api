@@ -26,10 +26,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-/**
- * Clase que representa un Documento Electrónico, incluyendo todos los campos
- * disponibles en un DE en formato XML.
- */
 @Schema(name = "DocumentoElectronico", description = "Dto de Documentos Electronicos")
 @Getter
 @Setter
