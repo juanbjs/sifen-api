@@ -27,6 +27,8 @@ public class SifenUtil {
     private static String ID_CSC;
 
     private static String CSC;
+    
+    private static String PASSWORD_CERTIFICADO;
 
     private static boolean isFileexists(String path) {
         File archivo = new File(path);
@@ -48,7 +50,7 @@ public class SifenUtil {
         sifenConfig.setAmbiente(TipoAmbiente.valueOf(SIFEN_AMBIENTE));
         sifenConfig.setTipoCertificadoCliente(TipoCertificadoCliente.valueOf(TIPO_CERTIFICADO_CLIENTE));
         sifenConfig.setCertificadoCliente(CERTIFICADO_CLIENTE);
-        sifenConfig.setContrasenaCertificadoCliente(CERTIFICADO_CLIENTE);
+        sifenConfig.setContrasenaCertificadoCliente(PASSWORD_CERTIFICADO);
         sifenConfig.setIdCSC(ID_CSC);
         sifenConfig.setCSC(CSC);
         sifenConfig.setHabilitarNotaTecnica13(true);
@@ -80,6 +82,11 @@ public class SifenUtil {
     @Value("${sifen.idCsc}")
     public void setIdCsc(String idCsc) {
         ID_CSC = idCsc;
+    }
+    
+    @Value("${sifen.passwordCertificado}")
+    public void setPasswordCertificado(String passwordCertificado) {
+        PASSWORD_CERTIFICADO = passwordCertificado;
     }
 
 }

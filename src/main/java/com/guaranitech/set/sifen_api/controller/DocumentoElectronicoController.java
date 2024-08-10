@@ -24,12 +24,10 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
-import lombok.extern.log4j.Log4j2;
 
 @Tag(name = "Documentos Electronicos", description = "API para enviar documentos electronicos a la SIFEN")
 @RestController
 @RequestMapping("/api/documento/electronico")
-@Log4j2
 public class DocumentoElectronicoController {
 
 	private DocumentoElectronicoService documentoElectronicoService;

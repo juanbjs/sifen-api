@@ -30,7 +30,7 @@ public class TxContRuc {
     private String dDesEstCons;
 
     @Schema(name = "Campo dRUCFactElec. RUC consultado es facturador electrónico.")
-    @JsonProperty(value = "descripcion_estado")
+    @JsonProperty(value = "es_facturador_electrónico")
     private String dRUCFactElec;
 
     public TxContRuc convertFromTxContRuc(com.roshka.sifen.core.fields.response.ruc.TxContRuc xContRuc) {
