@@ -26,7 +26,16 @@ SIFEN-API es un proyecto de código abierto desarrollado en Java, utilizando el 
     ```
 3. Configura las propiedades:
 
-    Ajusta el archivo application.properties o application.yml en el directorio src/main/resources con las configuraciones necesarias para tu entorno (ej. configuraciones de base de datos, claves API, etc.).
+    Crea el archivo sifen.properties en el directorio src/main/resources con las configuraciones necesarias para tu entorno.
+
+    ```properties
+    sifen.sifenAmbiente=DEV
+    sifen.tipoCertificadoCliente=PFX
+    sifen.idCsc=0001
+    sifen.csc=ABCD0000000000000000000000000000
+    sifen.certificadoCliente="path"/certificado.pfx
+    sifen.passwordCertificado="password del certificado"
+    ```
 
 4. Ejecuta la aplicación:
     ```bash
