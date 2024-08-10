@@ -9,7 +9,7 @@ SIFEN-API es un proyecto de código abierto desarrollado en Java, utilizando el 
 - Código Abierto: Disponible para la comunidad, permitiendo contribuciones y mejoras continuas.
 
 ## Requisitos
-- Java 22 o superior
+- Java 17
 - Maven para la gestión de dependencias
 - Spring Boot 3.3.2 o superior
 
