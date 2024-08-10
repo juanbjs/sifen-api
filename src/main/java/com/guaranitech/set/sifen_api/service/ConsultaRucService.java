@@ -2,6 +2,8 @@ package com.guaranitech.set.sifen_api.service;
 
 import java.io.FileNotFoundException;
 
+import javax.xml.soap.SOAPException;
+
 import org.springframework.stereotype.Service;
 
 import com.guaranitech.set.sifen_api.http.response.RespuestaConsultaRUCDTO;
@@ -17,7 +19,7 @@ import lombok.extern.log4j.Log4j2;
 @Log4j2
 public class ConsultaRucService {
 
-	public RespuestaConsultaRUCDTO consultaRuc(String ruc) throws FileNotFoundException, SifenException {
+	public RespuestaConsultaRUCDTO consultaRuc(String ruc) throws FileNotFoundException, SifenException, SOAPException {
 		SifenConfig sifenConfig = SifenUtil.getSifenConfig();
 
 		log.info(ruc);

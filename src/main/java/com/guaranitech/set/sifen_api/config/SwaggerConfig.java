@@ -27,9 +27,9 @@ public class SwaggerConfig {
 	@Bean
 	public GroupedOpenApi appOpenApi() {
 
-		var packagesToScan = new String[] { "com.guaranitech.set.sifen_api.controller" };
-		var pathsToMatch = new String[] { "/api/**" };
-		var pathsToExclude = new String[] { "/v3/**" };
+		String[] packagesToScan = new String[] { "com.guaranitech.set.sifen_api.controller" };
+		String[] pathsToMatch = new String[] { "/api/**" };
+		String[] pathsToExclude = new String[] { "/v3/**" };
 		return GroupedOpenApi
 				.builder()
 				.group("app")
